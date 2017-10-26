@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 describe('Thermostat tests:', function() {
   var thermostat;
@@ -34,6 +34,22 @@ describe('Thermostat tests:', function() {
     expect(function() {
       thermostat.down();
     }).toThrowError('Minimum temperature reached!');
+  });
+
+  it("It should have a maximum temperature, with power save mode on, of 25", function(){
+    for (var i = 0; i < 5; i++) {
+      thermostat.up();
+    }
+    thermostat.powerSavingMode();
+    expect(function() {
+      thermostat.up();
+    }).toThrowError('Maximum temperature reached!');
+  });
+
+  it("It should have a reset button which returns temp to 20", function() {
+    thermostat.down();
+    thermostat.reset();
+    expect(thermostat.temperature()).toEqual(20);
   });
 
   describe("#powerSavingMode", function() {
