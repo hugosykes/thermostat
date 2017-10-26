@@ -2,9 +2,11 @@ function Thermostat() {
 
   const DEFAULTTEMP = 20;
   const MINIMUMTEMP = 10;
+  const LOWUSAGE = 18;
+  const HIGHUSAGE = 25
 
   this._temperature = DEFAULTTEMP;
-  this._powerSavingMode = false;
+  this._powerSavingMode = true;
 
   Thermostat.prototype.temperature = function() {
     return this._temperature;
@@ -36,12 +38,16 @@ function Thermostat() {
 
   Thermostat.prototype.maximumTemperature = function() {
     var max;
-    (this._powerSavingMode === true) ? max = 25 : max = 32;
+    (this._powerSavingMode === true) ? max = 25: max = 32;
     return max;
   };
 
   Thermostat.prototype.reset = function() {
     this._temperature = 20;
+  };
+
+  Thermostat.prototype.currentEnergyUsage = function() {
+    return this._temperature < LOWUSAGE ? 'low-usage' : this._temperature >= HIGHUSAGE ? 'high-usage' : 'medium-usage';
   };
 
 }
