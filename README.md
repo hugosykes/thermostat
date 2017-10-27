@@ -1,1 +1,1 @@
-## Thermostat with Tim & Hugo
+## Thermostat!
