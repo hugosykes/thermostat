@@ -1,84 +1,57 @@
-@charset "UTF-8";
-/* CSS Document */
+.body {
+	background: rgba(241,92,51,1.00);
+	font-family: "Lucida Console", Monaco, monospace;
+	text-align: center;
+	color: white;
+}
 
 .header {
-	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-	font-size: 38px;
-	font-style: italic;
-	text-align: center;
-	color: aqua;
-	position: relative;
-	width: 100%;
+	font-size: 45px;
 }
 
-.body {
-	background: #0AC7C0;
+.temperature-display {
+	font-size: 65px;
+	margin-bottom: 50px;
 }
 
-.tempDisplay {
-	width: 100%;
-	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+.top-buttons {
+	margin-bottom: 50px;
+}
+
+
+.button {
+	opacity: 0.7;
 	font-size: 20px;
-	text-align: center;
-	margin-bottom: 50px;
-}
-
-.UDR {
-	margin-left: 50px;
-	width: 70px;
-	height: 70px;
+	margin-left: 20px;
+	color: #fff;
+	height: 100px;
+	width: 100px;
+	background-color: rgba(219,76,3,1.00);
+	border: none;
 	border-radius: 50%;
-	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
-	font-size: 15px;
-	background-color: #FFFFFF;
-	color: #634113;
-	font-weight: bold;
+	box-shadow: 0 13px rgba(103,41,11,1.00);
 }
 
-.UDR:hover {
-	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-	background-color: #4CAF50; /* Green */
-	color: white;
+.button:focus {outline:0;}
+
+.button:hover {
+  background-color: rgba(167,74,6,1.00);
 }
 
-.UDR:focus {outline:0;}
-
-.reset {
-	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
-	font-size: 15px;
-	margin-right: 50px;
-	height: 50px;
-	width: 50px;
-	border-radius: 50%;	
+.button:active{
+	background-color: rgba(139,43,8,1.00);
+	box-shadow: 0 7px #27496d;
+  transform: translateY(5px);
 }
 
-.usage {
-	text-align: center;
-	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-	font-size: 40px;
+.energy-usage {
+	color: black;
+	font-size: 50px;
+  width: 200px;
+  height: 50px;
+	margin: 100px auto;
 }
 
-.powerSave {
-	width: 90px;
-	height: 90px;
-	border-radius: 20%;
-	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
-	font-size: 15px;
-	background-color: #FFFFFF;
-	color: #634113;
-	font-weight: bold;
+.weather {
+	font-size: 30px;
 }
-
-.powerSave:hover {
-	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-	background-color: #4CAF50; /* Green */
-	color: white;
-}
-
-.powerSave:focus {outline:0;}
-
-.PSM {
-	margin-top: 50px;
-	margin-bottom: 50px;
-}
-

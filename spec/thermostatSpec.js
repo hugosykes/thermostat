@@ -77,7 +77,7 @@ describe('Thermostat tests:', function() {
       for (var i = 0; i < 3; i++) {
         thermostat.down();
       }
-      expect(thermostat.currentEnergyUsage()).toEqual('low-usage');
+      expect(thermostat.currentEnergyUsage()).toEqual('Low usage');
     });
 
     it("should have 'medium-usage' when temperature is between 18 and 24 degrees", function() {
@@ -87,7 +87,7 @@ describe('Thermostat tests:', function() {
       expect(thermostat.temperature()).toEqual(17);
       for (var i = 0; i < 7; i++) {
         thermostat.up();
-        expect(thermostat.currentEnergyUsage()).toEqual('medium-usage');
+        expect(thermostat.currentEnergyUsage()).toEqual('Medium usage');
       }
     });
 
@@ -95,7 +95,7 @@ describe('Thermostat tests:', function() {
       for (var i = 0; i < 5; i++) {
         thermostat.up();
       }
-      expect(thermostat.currentEnergyUsage()).toEqual('high-usage');
+      expect(thermostat.currentEnergyUsage()).toEqual('High usage');
     });
 
   });

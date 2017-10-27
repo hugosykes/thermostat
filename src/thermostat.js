@@ -30,6 +30,7 @@ function Thermostat() {
 
   Thermostat.prototype.powerSavingMode = function() {
     (this._powerSavingMode === true) ? this._powerSavingMode = false: this._powerSavingMode = true;
+    this._powerSavingActivated();
   };
 
   Thermostat.prototype.isOnPowerSavingMode = function() {
@@ -38,7 +39,7 @@ function Thermostat() {
 
   Thermostat.prototype.maximumTemperature = function() {
     var max;
-    (this._powerSavingMode === true) ? max = 25: max = 32;
+    (this._powerSavingMode === true) ? max = HIGHUSAGE: max = 32;
     return max;
   };
 
@@ -47,7 +48,12 @@ function Thermostat() {
   };
 
   Thermostat.prototype.currentEnergyUsage = function() {
-    return this._temperature < LOWUSAGE ? 'low-usage' : this._temperature >= HIGHUSAGE ? 'high-usage' : 'medium-usage';
+    return this._temperature < LOWUSAGE ? 'Low usage' : this._temperature >= HIGHUSAGE ? 'High usage' : 'Medium usage';
   };
 
+  Thermostat.prototype._powerSavingActivated = function() {
+    if (this._temperature > 25) {
+      this._temperature = 25;
+    }
+  };
 }

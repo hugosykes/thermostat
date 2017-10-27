@@ -11,19 +11,23 @@
 
 
 
-<body class=' body '>
-  <div class='header '>
-    <h2> Welcome to your thermostat! </h2></div>
-  <div id='temperature' class='tempDisplay '>Temperature</div>
-  <div id='UDR' style='text-align: center; '>
-    <button id='temperature-up' class='UDR'>Up</button>
-    <button id='temperature-down' class='UDR'>Down</button>
-    <button id='temperature-reset' class='UDR'>Reset</button>
+<body class='body'>
+  <header class='header'>
+    <h2> Welcome to your thermostat! </h2>
+  </header>
+  <div class='weather'>
+    The temperature in London is: <span id='weather'></span>°C
   </div>
-  <div class='PSM' style='text-align: center '>
-    <button id='powerSave' class='powerSave '>Power Saving Mode</button>
+  <div id='temperature' class='temperature-display'></div>
+  <div id='UDR' class='top-buttons'>
+    <button class='button' id='temperature-up'>Up</button>
+    <button class='button' id='temperature-down'>Down</button>
+    <button class='button' id='temperature-reset'>Reset</button>
   </div>
-  <div id='usage' class='usage '>Usage</div>
+  <div>
+    <button class='button' id='powerSave'>Power Saving Mode</button>
+  </div>
+  <div class="energy-usage" id='usage'>Usage</div>
 </body>
 
 </html>
